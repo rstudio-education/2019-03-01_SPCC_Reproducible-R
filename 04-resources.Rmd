@@ -45,3 +45,5 @@ To insert and R Markdown code chunk
 
 * [The R Primers](https://rstudio.cloud/learn/primers) - A self-paced, code along introduction to R. _Work in progress._ Requires (free) RStudio Cloud account.
 
+* [SAS using R Markdown](https://www.ssc.wisc.edu/~hemken/SASworkshops/Markdown/SASmarkdown.html) - An explanation of how to use SAS code chunks in R Markdown.
+
