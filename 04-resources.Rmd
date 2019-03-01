@@ -47,3 +47,6 @@ To insert and R Markdown code chunk
 
 * [SAS using R Markdown](https://www.ssc.wisc.edu/~hemken/SASworkshops/Markdown/SASmarkdown.html) - An explanation of how to use SAS code chunks in R Markdown.
 
+## Today's Workshop Materials
+
+* [Reproducible Research with RStudio](https://github.com/rstudio-education/2019-03-01_SPCC_Reproducible-R) - A github repository with todays data, scripts, and slides.
