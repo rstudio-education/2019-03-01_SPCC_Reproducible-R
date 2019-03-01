@@ -1,0 +1,47 @@
+---
+title: "Resources"
+output: html_document
+---
+
+# Keyboard Shortcuts
+
+To run highlighted code in RStudio IDE
+
+* **Command + Enter** (_Mac_)
+* **Control + Enter** (_PC_)
+
+To insert and R Markdown code chunk
+
+* **Command + Option + i** (_Mac_)
+* **Control + Alt + i** (_PC_)
+
+# Useful links
+
+* [Download R](https://cran.r-project.org/) - Download R for free here (if you want a local copy). R is the language that we write our code in. What you are downloading here is the interpreter that can run R code.
+
+* [Download RStudio IDE](https://www.rstudio.com/products/rstudio/download/#download) - Download RStudio IDE for free here (if you want a local copy). RStudio IDE is an _Integrated Development Environment_, i.e. software that makes it easier to write and run R code. RStudio IDE is not required to run R code—you can run R from a terminal window—but I recommend using an IDE.
+
+* [RStudio Cloud](https://rstudio.cloud) - RStudio Cloud is a cloud based version of R and RStudio. It provides a way to use R without installing anything on your computer. RStudio Cloud requires you to log in with a free account. RStudio Cloud is currently in alpha mode.
+
+* [RStudio Connect](https://www.rstudio.com/products/connect/) - A publication hub for sharing executable content (like R Markdown documents). Free for teaching; 50% discount for research.
+
+* [R Markdown: The Bigger Picture](https://resources.rstudio.com/rstudio-conf-2019/r-markdown-the-bigger-picture) - A motivational talk from rstudio::conf 2019. Inspire yourself to give R Markdown a try.
+
+# Teach Yourself
+
+## Related Books (online, free)
+
+* [R Markdown: The Definitve Guide](https://bookdown.org/yihui/rmarkdown/) - An introduction and reference manual to R Markdown. **Start here** to look up R Markdown details.
+
+* [R for Data Science](https://r4ds.had.co.nz) - Introduction to doing data science with R's Tidyverse (a set of cutting edge R packages that facilitate data science).
+
+* [Hands-On Programming with R](https://rstudio-education.github.io/hopr/) - A gentle introduction to the programming aspects of the R language. You don't need to learn how to program with R to do data science with R.
+
+## Online Tutorials
+
+* [The R Markdown tutorial](https://rmarkdown.rstudio.com/lesson-1.html) - A short, self-paced, read along introduction to R Markdown.
+
+* [RStudio's Git/Github webinar](https://resources.rstudio.com/wistia-rstudio-essentials-2/rstudioessentialsmanagingpart2-2) - An in-depth presentation of the Git slides in my deck, by me.
+
+* [The R Primers](https://rstudio.cloud/learn/primers) - A self-paced, code along introduction to R. _Work in progress._ Requires (free) RStudio Cloud account.
+
