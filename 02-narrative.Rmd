@@ -1,0 +1,29 @@
+---
+title: 'Re: Bottle Machine'
+output: html_document
+---
+
+Does our bottle machine fill each bottle with 750 mL of beer (on average)?
+
+## Data
+
+I selected 50 bottles at random from the Dublin factory, which contained the following amounts of beer (mL):
+
+TODO
+
+The mean amount is **TODO**.
+
+## Reasoning
+
+The amounts of beer in our bottles should be normally distributed with a mean of 750 mL and a standard deviation of 3 mL. Let's use simulation to calculate the sample means of 1000 samples of size 50 generated from such a distribution.
+
+TODO
+
+TODO - ADD PLOT HERE
+
+I've plotted the distribution of the simulated means above. The blue line shows our observed sample mean. Notice that TODO of the simulations produced a sample mean as extreme as ours (p-value = TODO). In other words, our observations TODO.
+
+## Conclusion
+
+We TODO have evidence that the bottle machine is malfunctioning.
+

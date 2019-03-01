@@ -1,0 +1,63 @@
+---
+title: 'Re: Bottle Machine'
+output: html_document
+params: 
+  factory:
+    value: Dublin
+    choices:
+      - Dublin
+      - London 
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(here)
+
+filename <- switch(params$factory,
+  Dublin = "dublin.csv",
+  London = "london.csv")
+samples <- read_csv(here("data", filename))
+sample_mean <- mean(samples$amount)
+```
+
+Does our bottle machine fill each bottle with 750 mL of beer (on average)?
+
+## Data
+
+I selected 50 bottles at random from the `r params$factory` factory, which contained the following amounts of beer (mL):
+
+```{r echo = FALSE}
+samples$amount
+```
+
+The mean amount is **`r sample_mean`**.
+
+## Reasoning
+
+The amounts of beer in our bottles should be normally distributed with a mean of 750 mL and a standard deviation of 3 mL. Let's use simulation to calculate the sample means of 1000 samples of size 50 generated from such a distribution.
+
+```{r echo = FALSE}
+bootstrap_means <- replicate(1000, mean(rnorm(50, mean = 750, sd = 3)))
+delta <- abs(750 - sample_mean)
+bootstrap_deltas <- abs(750 - bootstrap_means)
+pvalue <- mean(bootstrap_deltas >= delta)
+```
+
+```{r echo = FALSE, fig.height = 2}
+ggplot() +
+  geom_histogram(aes(x = bootstrap_means), bins = 30) +
+  geom_rect(aes(xmin = -Inf, xmax = 750 - delta, 
+                ymin = -Inf, ymax = Inf), 
+            fill = "#4197D9", alpha = 0.2) +
+  geom_rect(aes(xmin = 750 + delta, xmax = Inf, 
+                ymin = -Inf, ymax = Inf),
+            fill = "#4197D9", alpha = 0.2) +
+  geom_vline(aes(xintercept = sample_mean), 
+             color = "#4197D9", size = 3)
+```
+
+I've plotted the distribution of the simulated means above. The blue line shows our observed sample mean. Notice that `r paste0(pvalue * 100, "%")` of the simulations produced a sample mean as extreme as ours (p-value = `r pvalue`). In other words, our observations `r ifelse(pvalue <= 0.05, "seem unlikely to have happened if the machine is functioning correctly", "are in accordance with our belief")`.
+
+## Conclusion
+
+We `r ifelse(pvalue <= 0.05, "", "do **not**")` have evidence that the bottle machine is malfunctioning.
